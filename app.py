@@ -3,7 +3,6 @@ from flask import Flask, jsonify, render_template, request, redirect, url_for
 '''
 It creates an instance of the Flask class, 
 which will be your WSGI (Web Server Gateway Interface) application.
-
 Learning Git
 '''
 app = Flask(__name__)
