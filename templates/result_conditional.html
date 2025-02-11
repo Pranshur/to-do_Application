@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+        }
+        .result-container {
+            text-align: center;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h1>Your Result:</h1>
+        {% if results>100 %}
+        <p>Invalid Score</p>
+        {% elif results>75 %}
+        <p>Score : {{results}}</p>
+        <p>Feedback: Good</p>
+        {% elif results>50 %}
+        <p>Score : {{results}}</p>
+        <p>Feedback: Average</p>
+        {% elif results>25 %}
+        <p>Score : {{results}}</p>
+        <p>Feedback: Bad</p>
+        {% elif results>0 %}
+        <p>Score : {{results}}</p>
+        <p>Feedback: Fail</p>
+        {%endif%}
+    </div>
+</body>
+</html>
