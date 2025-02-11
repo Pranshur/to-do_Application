@@ -89,7 +89,6 @@ def form():
         return f'<h1>Hello {name}, </h1> <h2>We have replied to your message stating - {message}.</h2>You can check the response in your inbox at {email}.'
     return render_template('form.html')
 
-
 ##### Variable Rule #####
 @app.route("/result/<int:score>")
 def result(score):
@@ -137,7 +136,6 @@ def submit_scores():
     else:
         return render_template('submit_result.html')
     return redirect(url_for('result_conditional', score = total_score))
-
 
 @app.route("/result_conditional/<int:score>")
 def result_conditional(score):
